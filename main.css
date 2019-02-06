@@ -1,8 +1,127 @@
-h1 {
-    color: red;
+.container {
+    overflow: auto;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 100px;
+    min-width: 723px;
 }
 
-.text2018 {
-    color: #ff59c0;
-    font-size: 40px;
+.minicont {
+    padding: 10px;
+    background: white;
+    border-radius: 2px;
+    box-shadow: 0 2px 4px 0 rgba(34, 36, 38, .12),
+        0 2px 10px 0 rgba(34, 36, 38, .08);
+}
+
+.product {
+    margin: 10px;
+    align-items: stretch;
+    display: flex;
+}
+
+.label {
+    width: 25%;
+    padding: 1rem 0rem 0.5rem;
+}
+
+.count {
+    width: 39%;
+    padding: 1rem;
+    vertical-align: middle;
+}
+
+.buttons {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    display: flex;
+}
+
+#cancel {
+    background-color: red;
+    color: white;
+}
+
+.button {
+    background-color: #DADADA;
+    font-size: .71428571rem;
+    border-radius: 1px;
+    cursor: pointer;
+    display: inline-block;
+    min-height: 1em;
+    outline: 0;
+    border: none;
+    vertical-align: middle;
+    background: linear-gradient(transparent, rgba(0, 0, 0, .05)) #F8F8F8;
+    color: rgba(0, 0, 0, .6);
+    margin: 0 .25em 0 0;
+    padding: 1em 1.5em;
+    text-shadow: none;
+    text-align: center;
+    border-radius: .4em;
+    box-shadow: 0 0 0 1px rgba(34, 36, 38, .15) inset,
+        0 -0.3em 0 0 rgba(34, 36, 38, .15) inset;
+    font-weight: 700;
+}
+
+
+.numlabel {
+    background: #cdcbcb;
+    font-size: .85714286rem;
+    display: inline-block;
+    line-height: 1;
+    vertical-align: middle;
+    margin: 0.2% .14285714em;
+    background-color: #E8E8E8;
+    padding: .5833em .833em;
+    color: rgba(0, 0, 0, .6);
+    text-transform: none;
+    font-weight: 700;
+    border: 0 solid transparent;
+    border-radius: .28571429rem;
+    transition: background .1s ease;
+}
+
+.round_button {
+    background: #04a613;
+    color: #FFF;
+    border-radius: 100%;
+    width: 2rem;
+    height: 100%;
+    box-shadow: 0 -0.3em 0 0 rgba(34, 36, 38, .15) inset;
+    display: inline-block;
+    min-height: 1em;
+    border: none;
+    text-align: center;
+}
+
+.bl-title {
+    padding: 1em;
+}
+
+.left {
+    padding: 1em;
+}
+
+.item {
+    margin-bottom: 3px;
+    background-color: #DADADA;
+    padding: .5833em .833em;
+    font-weight: 700;
+    border: 0 solid transparent;
+    border-radius: .28571429rem;
+    font-size: .64285714rem;
+    line-height: 1;
+    color: rgba(0, 0, 0, .6);
+    text-transform: none;
+}
+
+.orange-button {
+    font-size: .64285714rem;
+    width: 2rem;
+    height: 2rem;
+    text-align: center;
+    border-radius: 500rem;
+    background-color: #F2711C;
+    color: #FFF;
 }
