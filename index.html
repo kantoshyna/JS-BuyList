@@ -1,50 +1,69 @@
 <!DOCTYPE html>
 <html>
-  <head lang="uk">
-    <meta charset="UTF-8" />
-    <title>My Page</title>
-    <link rel="stylesheet" type="text/css" href="main.css" />
-  </head>
 
-  <body
-    style="background-color: #DADADA; font-family: Arial, Helvetica, sans-serif"
-  >
-    <div class="container">
-      <div style="padding: 10px; width: 60%; min-width: 300px;">
-        <div class="minicont">
-          <input />
-          <div class="product">
-            <div class="label">
-              Помідори
-            </div>
-            <div class="count">
-              <button class="round_button" id="cancel">-</button>
-              <span class="numlabel">3</span>
-              <button class="round_button">+</button>
-            </div>
-            <div class="buttons">
-              <button class="button">Купленo</button>
-              <button class="button" id="cancel">x</button>
-            </div>
+<head lang="uk">
+  <meta charset="UTF-8" />
+  <title>My Page</title>
+  <link rel="stylesheet" type="text/css" href="main.css" />
+</head>
+
+<body style="background-color: #DADADA; font-family: Arial, Helvetica, sans-serif">
+  <div class="container">
+    <div style="padding: 10px; width: 60%; min-width: 300px;">
+      <div class="minicont">
+        <div class="my-input">
+          <input type="text" placeholder="Назва товару" style="box-sizing: border-box; width: 100%" />
+          <button class="add">Додати</button>
+        </div>
+        <div class="product">
+          <div class="label">
+            Помідори
+          </div>
+          <div class="count">
+            <button class="round_button" id="cancel">-</button>
+            <span class="numlabel">3</span>
+            <button class="round_button">+</button>
+          </div>
+          <div class="buttons">
+            <button class="button">Купленo</button>
+            <button class="button" id="cancel">x</button>
           </div>
         </div>
-      </div>
-      <div style="padding: 10px; width: 30%">
-        <div class="minicont">
-          <div class="bl-title"><h3 style="margin: 0">Залишилося</h3></div>
-          <div class="left">
-            <span class="item"
-              >Tomatos
-              <span class="orange-button">1</span>
-            </span>
-            <span class="item"
-              >Cookies
-              <span class="orange-button">2</span>
-            </span>
+        <div class="product">
+          <div class="label">
+            Печиво
           </div>
-          <div class="bl-title"><h3 style="margin: 0">Куплене</h3></div>
+          <div class="count">
+            <button class="round_button" id="cancel">-</button>
+            <span class="numlabel">2</span>
+            <button class="round_button">+</button>
+          </div>
+          <div class="buttons">
+            <button class="button">Купленo</button>
+            <button class="button" id="cancel">x</button>
+          </div>
         </div>
       </div>
     </div>
-  </body>
+    <div style="padding: 10px; width: 30%">
+      <div class="minicont">
+        <div class="bl-title" style="border-bottom: 1px solid grey">
+          <h3 style="margin: 0">Залишилося</h3>
+        </div>
+        <div class="left">
+          <span class="item">Помідори
+            <span class="orange-button">1</span>
+          </span>
+          <span class="item">Печиво
+            <span class="orange-button">2</span>
+          </span>
+        </div>
+        <div class="bl-title" style="border-top: 1px solid grey">
+          <h3 style="margin: 0">Куплено</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
 </html>
