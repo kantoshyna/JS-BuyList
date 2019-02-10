@@ -177,3 +177,25 @@
   vertical-align: middle;
   line-height: 1.7;
 }
+
+.bage {
+  position: fixed;
+  bottom: 0;
+  left: 40px;
+  background-color: #9207ac;
+  color: white;
+  width: 150px;
+  height: 60px;
+  min-width: 80px;
+  border-radius: 5px 5px 0 0;
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: height 1s;
+}
+
+.bage:hover {
+  background-color: #1407ec;
+  height: 120px;
+}
