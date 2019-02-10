@@ -9,23 +9,23 @@
 
 <body style="background-color: #DADADA; font-family: Arial, Helvetica, sans-serif">
   <div class="container">
-    <div class="minicont" style="width: 60%; min-width: 300px;">
+    <div class="minicont" style=" width: 60%; min-width: 300px;">
       <div class="my-input">
         <input type="text" placeholder="Назва товару" style="box-sizing: border-box; width: 100%" />
-        <button class="add">Додати</button>
+        <button class="add tooltip">Додати<span class="tooltiptext">Add</span></button>
       </div>
       <div class="product">
         <div class="label">
           Помідори
         </div>
         <div class="count">
-          <button class="round_button" id="cancel">-</button>
+          <button class="round_button tooltip" id="cancel">-<span class="tooltiptext">Decrement</span></button>
           <span class="numlabel">3</span>
-          <button class="round_button">+</button>
+          <button class="round_button tooltip">+<span class="tooltiptext">Increment</span></button>
         </div>
         <div class="buttons">
-          <button class="button">Купленo</button>
-          <button class="button" id="cancel">x</button>
+          <button class="button tooltip">Купленo<span class="tooltiptext">Bought</span></button>
+          <button class="button tooltip" id="cancel">x<span class="tooltiptext">Cancel</span></button>
         </div>
       </div>
       <div class="product">
@@ -33,13 +33,13 @@
           Печиво
         </div>
         <div class="count">
-          <button class="round_button" id="cancel">-</button>
+          <button class="round_button tooltip" id="cancel">-<span class="tooltiptext">Decrement</span></button>
           <span class="numlabel">2</span>
-          <button class="round_button">+</button>
+          <button class="round_button tooltip">+<span class="tooltiptext">Increment</span></button>
         </div>
         <div class="buttons">
-          <button class="button">Купленo</button>
-          <button class="button" id="cancel">x</button>
+          <button class="button tooltip">Купленo<span class="tooltiptext">Bought</span></button>
+          <button class="button tooltip" id="cancel">x<span class="tooltiptext">Cancel</span></button>
         </div>
       </div>
     </div>
