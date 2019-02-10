@@ -197,5 +197,17 @@
 
 .bage:hover {
   background-color: #1407ec;
-  height: 120px;
+  height: 105px;
+}
+
+.bage:hover * {
+  visibility: visible;
+}
+
+.name {
+  visibility: hidden;
+  text-align: left;
+  padding-left: 5px;
+  font-size: 0.6em;
+  font-weight: 100;
 }
