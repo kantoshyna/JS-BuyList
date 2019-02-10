@@ -1,9 +1,10 @@
 .container {
   overflow: auto;
   display: flex;
-  justify-content: space-around;
   padding-top: 100px;
   min-width: 723px;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 
 .minicont {
@@ -67,19 +68,20 @@
 
 .label {
   width: 25%;
-  padding: 1rem 0rem 0.5rem;
+  padding: 1.5rem 0rem;
+  height: 1em;
 }
 
 .count {
-  width: 39%;
+  width: 37%;
   padding: 1rem;
   vertical-align: middle;
-  align-items: stretch;
+  text-align: center;
 }
 
 .buttons {
+  width: 37%;
   padding: 1rem;
-  display: flex;
   float: right;
   text-align: right;
 }
