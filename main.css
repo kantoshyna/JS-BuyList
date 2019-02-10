@@ -38,8 +38,7 @@
   font-weight: 700;
   font-size: 1.5rem;
   cursor: pointer;
-  transition: height 1s;
-  transition: background-color 0.5s ease;
+  transition: all 1s ease-in-out;
 }
 
 .bage:hover {
@@ -226,7 +225,7 @@
   font-weight: 800;
   visibility: hidden;
   width: 100px;
-  height: 1.1em !important;
+  height: 0 !important;
   background-color: #9207ac;
   color: #fff;
   text-align: center;
@@ -238,7 +237,7 @@
   left: 50%;
   margin-left: -50px;
   opacity: 0;
-  transition: opacity 0.3s;
+  transition: all 1s;
 }
 
 .tooltip .tooltiptext::after {
@@ -252,6 +251,7 @@
 .tooltip:hover .tooltiptext {
   visibility: visible;
   opacity: 1;
+  height: 1.1em !important;
 }
 
 .orange-button {
