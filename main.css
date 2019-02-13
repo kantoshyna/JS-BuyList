@@ -50,6 +50,33 @@
   visibility: visible;
 }
 
+@media print {
+  .bage {
+    background-color: white;
+    color: black !important;
+    border: 1px solid #9207ac;
+  }
+  .buylist {
+    visibility: hidden;
+    height: 0;
+  }
+  .name {
+    z-index: 1;
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    width: 100px;
+    height: 30px;
+    background: #2185d0;
+    visibility: visible;
+    color: black !important;
+  }
+}
+
+.buylist {
+  padding: 0.5em;
+}
+
 .buttons {
   width: 37%;
   min-width: 133px;
