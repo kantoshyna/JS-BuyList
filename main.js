@@ -70,5 +70,14 @@ function addProduct(params) {
     b2tooltip.innerText = "Cancel";
     button2.appendChild(b2tooltip);
 
+    var inList = document.createElement('span');
+    inList.className = "item";
+    inList.innerText = newItem;
+    document.getElementById("left").appendChild(inList);
+
+    var orangeNum = document.createElement('span');
+    orangeNum.className = "orange-button";
+    orangeNum.innerText = "1";
+    inList.appendChild(orangeNum);
 
 }
