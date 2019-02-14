@@ -50,29 +50,6 @@
   visibility: visible;
 }
 
-@media print {
-  .bage {
-    background-color: white;
-    color: black !important;
-    border: 1px solid #9207ac;
-  }
-  .buylist {
-    visibility: hidden;
-    height: 0;
-  }
-  .name {
-    z-index: 1;
-    position: absolute;
-    bottom: 5px;
-    left: 5px;
-    width: 100px;
-    height: 30px;
-    background: #2185d0;
-    visibility: visible;
-    color: black !important;
-  }
-}
-
 .buylist {
   padding: 0.5em;
 }
@@ -121,15 +98,7 @@
   min-width: 470px;
 }
 
-@media (max-width: 700px) {
-  .container {
-    display: block;
-    margin-right: -10%;
-  }
-  .minicont {
-    width: 80% !important;
-  }
-}
+
 
 .count {
   width: 37%;
@@ -297,4 +266,35 @@
 .button .round_button :hover .tooltiptext {
   visibility: visible;
   opacity: 1;
+}
+
+@media (max-width: 700px) {
+  .container {
+    display: block;
+    margin-right: -10%;
+  }
+
+  .minicont {
+    width: 80% !important;
+  }
+}
+
+@media print {
+  .bage {
+    background-color: white;
+    color: black !important;
+    border: 1px solid #9207ac;
+  }
+
+  .buylist {
+    visibility: hidden;
+    height: 0;
+  }
+
+  .name {
+    z-index: 1;
+    position: absolute;
+    visibility: unset;
+    bottom: 9px;
+  }
 }

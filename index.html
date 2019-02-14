@@ -1,99 +1,160 @@
 <!DOCTYPE html>
 <html>
+  <head lang="uk">
+    <meta charset="UTF-8" />
+    <title>My Page</title>
+    <link rel="stylesheet" type="text/css" href="main.css" />
+  </head>
 
-<head lang="uk">
-  <meta charset="UTF-8" />
-  <title>My Page</title>
-  <link rel="stylesheet" type="text/css" href="main.css" />
-</head>
-
-<body style="background-color: #DADADA; font-family: Arial, Helvetica, sans-serif">
-  <div class="container">
-    <div class="minicont" id="leftcont" style=" width: 60%; min-width: 300px;">
-      <div class="my-input">
-        <input type="text" id="myInput" placeholder="Назва товару" style="box-sizing: border-box; width: 100%" />
-        <button class="add tooltip" onclick="addProduct()">Додати<span class="tooltiptext">Add</span></button>
+  <body
+    style="background-color: #DADADA; font-family: Arial, Helvetica, sans-serif"
+  >
+    <div class="container">
+      <div
+        class="minicont"
+        id="leftcont"
+        style=" width: 60%; min-width: 300px;"
+      >
+        <div class="my-input">
+          <input
+            type="text"
+            id="myInput"
+            placeholder="Назва товару"
+            style="box-sizing: border-box; width: 100%"
+          />
+          <button class="add tooltip" onclick="addProduct()">
+            Додати<span class="tooltiptext">Add</span>
+          </button>
+        </div>
+        <div class="product" id="Помідори">
+          <div class="label">
+            Помідори
+          </div>
+          <div class="count">
+            <button class="round_button tooltip" id="cancel">
+              -<span class="tooltiptext">Decrement</span>
+            </button>
+            <span class="numlabel">3</span>
+            <button class="round_button tooltip">
+              +<span class="tooltiptext">Increment</span>
+            </button>
+          </div>
+          <div class="buttons">
+            <button class="button tooltip">
+              Купленo<span class="tooltiptext">Bought</span>
+            </button>
+            <button class="button tooltip" id="cancel">
+              x<span class="tooltiptext">Cancel</span>
+            </button>
+          </div>
+        </div>
+        <div class="product" id="Печиво">
+          <div class="label">
+            Печиво
+          </div>
+          <div class="count">
+            <button class="round_button tooltip" id="cancel">
+              -<span class="tooltiptext">Decrement</span>
+            </button>
+            <span class="numlabel">2</span>
+            <button class="round_button tooltip">
+              +<span class="tooltiptext">Increment</span>
+            </button>
+          </div>
+          <div class="buttons">
+            <button class="button tooltip">
+              Купленo<span class="tooltiptext">Bought</span>
+            </button>
+            <button class="button tooltip" id="cancel">
+              x<span class="tooltiptext">Cancel</span>
+            </button>
+          </div>
+        </div>
+        <div class="product" id="Печиво">
+          <div class="label">
+            Печиво
+          </div>
+          <div class="count">
+            <button class="round_button tooltip" id="cancel">
+              -
+              <span class="tooltiptext">Decrement</span>
+            </button>
+            <span class="numlabel">2</span>
+            <button class="round_button tooltip">
+              +
+              <span class="tooltiptext">Increment</span>
+            </button>
+          </div>
+          <div class="buttons">
+            <button class="button tooltip">
+              Купленo
+              <span class="tooltiptext">Bought</span>
+            </button>
+            <button class="button tooltip" id="cancel">
+              x
+              <span class="tooltiptext">Cancel</span>
+            </button>
+          </div>
+        </div>
+        <div class="product" id="Сир">
+          <div class="label">
+            Сир
+          </div>
+          <div class="count">
+            <button class="round_button tooltip" id="cancel">
+              -
+              <span class="tooltiptext">Decrement</span>
+            </button>
+            <span class="numlabel">1</span>
+            <button class="round_button tooltip">
+              +
+              <span class="tooltiptext">Increment</span>
+            </button>
+          </div>
+          <div class="buttons">
+            <button class="button tooltip">
+              Купленo
+              <span class="tooltiptext">Bought</span>
+            </button>
+            <button class="button tooltip" id="cancel">
+              x
+              <span class="tooltiptext">Cancel</span>
+            </button>
+          </div>
+        </div>
       </div>
-      <div class="product" id="Помідори">
-        <div class="label">
-          Помідори
+      <div class="minicont" id="rightcont" style=" width: 30%">
+        <div class="bl-title" style="border-bottom: 1px solid grey">
+          <h3 style="margin: 0">Залишилося</h3>
         </div>
-        <div class="count">
-          <button class="round_button tooltip" id="cancel">-<span class="tooltiptext">Decrement</span></button>
-          <span class="numlabel">3</span>
-          <button class="round_button tooltip">+<span class="tooltiptext">Increment</span></button>
+        <div id="left">
+          <span class="item"
+            >Помідори
+            <span class="orange-button">3</span>
+          </span>
+          <span class="item"
+            >Печиво
+            <span class="orange-button">2</span>
+          </span>
+          <span class="item"
+            >Сир
+            <span class="orange-button">1</span>
+          </span>
         </div>
-        <div class="buttons">
-          <button class="button tooltip">Купленo<span class="tooltiptext">Bought</span></button>
-          <button class="button tooltip" id="cancel">x<span class="tooltiptext">Cancel</span></button>
+        <div class="bl-title" style="border-top: 1px solid grey">
+          <h3 style="margin: 0">Куплено</h3>
         </div>
-      </div>
-      <div class="product" id="Печиво">
-        <div class="label">
-          Печиво
-        </div>
-        <div class="count">
-          <button class="round_button tooltip" id="cancel">-<span class="tooltiptext">Decrement</span></button>
-          <span class="numlabel">2</span>
-          <button class="round_button tooltip">+<span class="tooltiptext">Increment</span></button>
-        </div>
-        <div class="buttons">
-          <button class="button tooltip">Купленo<span class="tooltiptext">Bought</span></button>
-          <button class="button tooltip" id="cancel">x<span class="tooltiptext">Cancel</span></button>
-        </div>
-      </div>
-      <div class="product" id="Сир">
-        <div class="label">
-          Сир
-        </div>
-        <div class="count">
-          <button class="round_button tooltip" id="cancel">-
-            <span class="tooltiptext">Decrement</span>
-          </button>
-          <span class="numlabel">1</span>
-          <button class="round_button tooltip">+
-            <span class="tooltiptext">Increment</span>
-          </button>
-        </div>
-        <div class="buttons">
-          <button class="button tooltip">Купленo
-            <span class="tooltiptext">Bought</span>
-          </button>
-          <button class="button tooltip" id="cancel">x
-            <span class="tooltiptext">Cancel</span>
-          </button>
-        </div>
+        <div id="cart"></div>
+        <!--/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/-->
       </div>
     </div>
-    <div class="minicont" id="rightcont" style=" width: 30%">
-      <div class="bl-title" style="border-bottom: 1px solid grey">
-        <h3 style="margin: 0">Залишилося</h3>
+    <div class="bage">
+      <div class="buylist">Buy List</div>
+      <div class="name">
+        Created by: <br />
+        <div style="font-size: 1.3em">Katia Antoshyna</div>
       </div>
-      <div id="left">
-        <span class="item">Помідори
-          <span class="orange-button">3</span>
-        </span>
-        <span class="item">Печиво
-          <span class="orange-button">2</span>
-        </span>
-        <span class="item">Сир
-          <span class="orange-button">1</span>
-        </span>
-      </div>
-      <div class="bl-title" style="border-top: 1px solid grey">
-        <h3 style="margin: 0">Куплено</h3>
-      </div>
-      <div id="cart"></div> /*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
     </div>
-  </div>
-  <div class="bage">
-    <div class="buylist">Buy List</div>
-    <div class="name">
-      Created by: <br />
-      <div style="font-size: 1.3em">Katia Antoshyna</div>
-    </div>
-  </div>
-  <script src='main.js'></script>
-</body>
-
+    <script src="main.js"></script>
+  </body>
 </html>
