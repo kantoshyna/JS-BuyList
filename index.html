@@ -22,7 +22,10 @@
             placeholder="Назва товару"
             style="box-sizing: border-box; width: 100%"
           />
-          <button class="add tooltip" onclick="addProduct()">
+          <button
+            class="add tooltip"
+            onclick="insertNewProduct(document.getElementById('myInput').value)"
+          >
             Додати<span class="tooltiptext">Add</span>
           </button>
         </div>
@@ -70,32 +73,7 @@
             </button>
           </div>
         </div>
-        <div class="product" id="Печиво">
-          <div class="label">
-            Печиво
-          </div>
-          <div class="count">
-            <button class="round_button tooltip" id="cancel">
-              -
-              <span class="tooltiptext">Decrement</span>
-            </button>
-            <span class="numlabel">2</span>
-            <button class="round_button tooltip">
-              +
-              <span class="tooltiptext">Increment</span>
-            </button>
-          </div>
-          <div class="buttons">
-            <button class="button tooltip">
-              Купленo
-              <span class="tooltiptext">Bought</span>
-            </button>
-            <button class="button tooltip" id="cancel">
-              x
-              <span class="tooltiptext">Cancel</span>
-            </button>
-          </div>
-        </div>
+
         <div class="product" id="Сир">
           <div class="label">
             Сир
@@ -124,7 +102,10 @@
         </div>
       </div>
       <div class="minicont" id="rightcont" style=" width: 30%">
-        <div class="bl-title" style="border-bottom: 1px solid grey">
+        <div
+          class="bl-title"
+          style="border-bottom: 1px solid rgb(206, 200, 200)"
+        >
           <h3 style="margin: 0">Залишилося</h3>
         </div>
         <div id="left">
@@ -141,10 +122,10 @@
             <span class="orange-button">1</span>
           </span>
         </div>
-        <div class="bl-title" style="border-top: 1px solid grey">
+        <div class="bl-title" style="border-top: 1px solid rgb(206, 200, 200)">
           <h3 style="margin: 0">Куплено</h3>
         </div>
-        <div id="cart"></div>
+        <div class="cart"></div>
         <!--/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/-->
       </div>
     </div>
