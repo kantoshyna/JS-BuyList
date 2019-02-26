@@ -2,11 +2,18 @@ function renderProduct(name) {
   var productNumber = 1;
   var clone = $("#product_template").clone();
   var itemclone = $("#item_template").clone();
+  var boughtitemclone = $("#bought-item_template").clone();
 
   itemclone.removeAttr("id");
   itemclone.removeAttr("style");
   itemclone.text(name + " ");
   itemclone.append('<span class="orange-button">1</span>');
+
+  boughtitemclone.removeAttr("id");
+  boughtitemclone.text(name + " ");
+  boughtitemclone.append(
+    '<span class="orange-button" style="text-decoration: line-through">1</span>'
+  );
 
   clone.attr("id", name);
   clone.find(".label").text(name);
@@ -28,11 +35,14 @@ function renderProduct(name) {
     clone.find(".label").css("text-decoration", "line-through");
     clone.find(".round_button").hide();
     itemclone.hide();
+    boughtitemclone.find(".orange-button").text(productNumber);
+    boughtitemclone.show();
   });
   clone.find(".button.tooltip.cancel").click(function() {
     clone.find(".label").css("text-decoration", "none");
     clone.find(".round_button").show();
     itemclone.show();
+    boughtitemclone.hide();
   });
 
   clone.show();
@@ -40,43 +50,14 @@ function renderProduct(name) {
 
   itemclone.show();
   $("#left").append(itemclone);
-}
 
-function renderProduct1(itemValue) {
-  return (
-    '   <div class="product" id=' +
-    itemValue +
-    ">  " +
-    '             <div class="label">  ' +
-    itemValue +
-    "             </div>  " +
-    '             <div class="count">  ' +
-    '               <button class="round_button tooltip" id="cancel">  ' +
-    "                 -  " +
-    '                 <span class="tooltiptext">Decrement</span>  ' +
-    "               </button>  " +
-    '               <span class="numlabel">1</span>  ' +
-    '               <button class="round_button tooltip">  ' +
-    "                 +  " +
-    '                 <span class="tooltiptext">Increment</span>  ' +
-    "               </button>  " +
-    "             </div>  " +
-    '             <div class="buttons">  ' +
-    '               <button class="button tooltip">  ' +
-    "                 Купленo  " +
-    '                 <span class="tooltiptext">Bought</span>  ' +
-    "               </button>  " +
-    '               <button class="button tooltip" id="cancel">  ' +
-    "                 x  " +
-    '                 <span class="tooltiptext">Cancel</span>  ' +
-    "               </button>  " +
-    "             </div>  " +
-    "          </div>  "
-  );
+  boughtitemclone.hide();
+  $("#cart").append(boughtitemclone);
 }
 
 $("#product_template").hide();
 $("#item_template").hide();
+$("#bought-item_template").hide();
 renderProduct("Помідори");
 renderProduct("Печиво");
 renderProduct("Сир");
