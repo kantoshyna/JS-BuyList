@@ -107,10 +107,11 @@
 
 .count {
   width: 37%;
-  min-width: 108px;
+  min-width: 148px;
   padding: 1rem;
   vertical-align: middle;
   text-align: center;
+  box-sizing: border-box;
 }
 
 .cancel {
