@@ -13,7 +13,7 @@ function renderProduct(name) {
   clone.find(".round_button.tooltip").click(function() {
     productNumber++;
     clone.find(".numlabel").text(productNumber);
-    itemclone.find(".orange_button").text(productNumber);
+    itemclone.find(".orange-button").text(productNumber);
   });
   clone.find(".round_button.tooltip.cancel").click(function() {
     if (productNumber > 2) {
@@ -22,7 +22,7 @@ function renderProduct(name) {
       productNumber--;
     }
     clone.find(".numlabel").text(productNumber);
-    itemclone.find(".orange_button").text(productNumber);
+    itemclone.find(".orange-button").text(productNumber);
   });
   clone.find(".button.tooltip:contains('Купленo')").click(function() {
     clone.find(".label").css("text-decoration", "line-through");
