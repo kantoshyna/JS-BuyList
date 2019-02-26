@@ -3,30 +3,40 @@ function renderProduct(name) {
   var clone = $("#product_template").clone();
   var itemclone = $("#item_template").clone();
 
+  itemclone.removeAttr("id");
+  itemclone.removeAttr("style");
+  itemclone.text(name + " ");
+  itemclone.append('<span class="orange-button">1</span>');
+
   clone.attr("id", name);
   clone.find(".label").text(name);
   clone.find(".round_button.tooltip").click(function() {
     productNumber++;
     clone.find(".numlabel").text(productNumber);
+    itemclone.find(".orange_button").text(productNumber);
   });
   clone.find(".round_button.tooltip.cancel").click(function() {
-    productNumber -= 2;
+    if (productNumber > 2) {
+      productNumber -= 2;
+    } else {
+      productNumber--;
+    }
     clone.find(".numlabel").text(productNumber);
+    itemclone.find(".orange_button").text(productNumber);
   });
   clone.find(".button.tooltip:contains('Купленo')").click(function() {
     clone.find(".label").css("text-decoration", "line-through");
+    clone.find(".round_button").hide();
+    itemclone.hide();
   });
   clone.find(".button.tooltip.cancel").click(function() {
     clone.find(".label").css("text-decoration", "none");
+    clone.find(".round_button").show();
+    itemclone.show();
   });
 
   clone.show();
   $("#leftcont").append(clone);
-
-  itemclone.removeAttr("id");
-  itemclone.removeAttr("style");
-  itemclone.text(name + " ");
-  itemclone.append('<span class="orange-button">1</span>');
 
   itemclone.show();
   $("#left").append(itemclone);
@@ -74,5 +84,6 @@ renderProduct("Сир");
 function insertNewProduct(name) {
   if (name == "" || document.getElementById(name) != null) return;
   renderProduct(name);
-  document.getElementById("myInput").focus();
+  $("#myInput").focus();
+  $("#myInput").val("");
 }
