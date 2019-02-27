@@ -187,6 +187,8 @@
 
 .new-name {
   display: none;
+  width: 25%;
+  padding: 1.5rem 1rem;
 }
 
 .numlabel {
@@ -223,6 +225,7 @@
   padding: 3px;
   display: flex;
   border-top: 1px solid rgb(206, 200, 200);
+
 }
 
 .round_button {

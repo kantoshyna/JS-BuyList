@@ -17,6 +17,32 @@ function renderProduct(name) {
 
   clone.attr("id", name);
   clone.find(".label").text(name);
+
+  //============================== CHANGE NAME ON CLICK ===============================
+  clone.find(".label").click(function() {
+    clone.find(".new-name").attr("placeholder", name);
+    clone.find(".new-name").css("display", "initial");
+    clone.find(".new-name").focus();
+    clone.find(".label").css("display", "none");
+    clone.find(".new-name").blur(function() {
+      var text = clone.find(".new-name").val();
+      if (!!text) {
+        name = text;
+        clone.find(".label").text(name);
+        itemclone.text(name + " ");
+        itemclone.append('<span class="orange-button">1</span>');
+        boughtitemclone.text(name + " ");
+        boughtitemclone.append(
+          '<span class="orange-button" style="text-decoration: line-through">1</span>'
+        );
+      }
+      clone.find(".new-name").css("display", "none");
+      clone.find(".new-name").val("");
+      clone.find(".label").css("display", "initial");
+    });
+  });
+
+  //========================== INCREMENT AND DECREMENT ==============================
   clone.find(".round_button.tooltip").click(function() {
     productNumber++;
     clone.find(".numlabel").text(productNumber);
@@ -32,6 +58,7 @@ function renderProduct(name) {
     itemclone.find(".orange-button").text(productNumber);
   });
 
+  //============================== BUY AND UNBUY ==============================
   clone.find(".button.tooltip:contains('Купленo')").click(function() {
     clone.find(".label").css("text-decoration", "line-through");
     clone.find(".round_button").hide();
@@ -51,13 +78,14 @@ function renderProduct(name) {
     boughtitemclone.show();
   });
 
+  //=============================== DELETE PRODUCT =================================
   clone.find(".button.tooltip.cancel").click(function() {
-    clone.find(".label").css("text-decoration", "none");
-    clone.find(".round_button").show();
-    itemclone.show();
-    boughtitemclone.hide();
+    clone.remove();
+    itemclone.remove();
+    boughtitemclone.remove();
   });
 
+  //============================== LET THE SHOW BEGIN =============================
   clone.show();
   $("#leftcont").append(clone);
 
@@ -75,6 +103,7 @@ renderProduct("Помідори");
 renderProduct("Печиво");
 renderProduct("Сир");
 
+// RUNS FROM HTML
 function insertNewProduct(name) {
   if (name == "" || document.getElementById(name) != null) return;
   renderProduct(name);
@@ -82,6 +111,7 @@ function insertNewProduct(name) {
   $("#myInput").val("");
 }
 
+// DRAWING "NOT BOUGHT" BUTTON
 function notBoughtButton(clone) {
   clone.find(".buttons").append('<button class="button tooltip"></button >');
   clone.find(".buttons .button.tooltip:last-child").text("Не купленo");
