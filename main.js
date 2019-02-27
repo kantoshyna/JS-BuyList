@@ -28,6 +28,7 @@ function renderProduct(name) {
       var text = clone.find(".new-name").val();
       if (!!text) {
         name = text;
+        clone.attr("id", name);
         clone.find(".label").text(name);
         itemclone.text(name + " ");
         itemclone.append('<span class="orange-button">1</span>');
