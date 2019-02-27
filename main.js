@@ -31,13 +31,26 @@ function renderProduct(name) {
     clone.find(".numlabel").text(productNumber);
     itemclone.find(".orange-button").text(productNumber);
   });
+
   clone.find(".button.tooltip:contains('Купленo')").click(function() {
     clone.find(".label").css("text-decoration", "line-through");
     clone.find(".round_button").hide();
+    clone.find(".button.tooltip").hide();
+    notBoughtButton(clone);
+    clone.find(".button.tooltip:contains('Не купленo')").click(function() {
+      clone.find(".label").css("text-decoration", "none");
+      clone.find(".round_button").show();
+      clone.find(".button.tooltip").show();
+      $(".button.tooltip:contains('Не купленo')").remove();
+      itemclone.show();
+      boughtitemclone.hide();
+      clone.find(".buttons").css("padding-right", "1rem");
+    });
     itemclone.hide();
     boughtitemclone.find(".orange-button").text(productNumber);
     boughtitemclone.show();
   });
+
   clone.find(".button.tooltip.cancel").click(function() {
     clone.find(".label").css("text-decoration", "none");
     clone.find(".round_button").show();
@@ -67,4 +80,13 @@ function insertNewProduct(name) {
   renderProduct(name);
   $("#myInput").focus();
   $("#myInput").val("");
+}
+
+function notBoughtButton(clone) {
+  clone.find(".buttons").append('<button class="button tooltip"></button >');
+  clone.find(".buttons .button.tooltip:last-child").text("Не купленo");
+  clone
+    .find(".button.tooltip:contains('Не купленo')")
+    .append('<span class= "tooltiptext"> Not bought</span>');
+  clone.find(".buttons").css("padding-right", "2rem");
 }
